@@ -1,0 +1,19 @@
+<!--2) -  onkeyup,keypress,keydown -->
+
+
+<html>
+    <head>
+        <script>
+            function fun(id) {
+                id.bgColor="blue";
+            }
+            function fun1(e) {
+                alert(e.keyCode);
+            }
+            function fun2(id) {
+                id.bgColor="red";
+            }
+        </script>
+    </head>
+    <body onkeyup="fun(this)" onkeypress="fun1(event)" onkeydown="fun2(this)"></body>
+</html>
