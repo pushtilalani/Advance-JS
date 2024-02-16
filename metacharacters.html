@@ -1,0 +1,22 @@
+<!-- metacharacters(^,*,$,\w,\W,\d,\D,+) -->
+
+<html>
+    <head>
+        <script>
+            function fun() {
+                pat = /bo+/i ;
+                f = document.getElementById("f1").value ;
+                if(pat.test(f)) {
+                    alert("PERFECT");
+                }
+                else {
+                    alert("not PERFECT");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="f1">
+        <input type="submit" onclick="fun()">
+    </body>
+</html>                                            
