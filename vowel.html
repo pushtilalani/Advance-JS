@@ -1,0 +1,29 @@
+<!-- 3) - Write a JS Code to handle following events :- 
+     i) - give key code for keypress.
+     ii) - script should give message vowel is pressed on pressing vowel key.
+           background color should change after releasing the press key. -->
+
+
+
+           <html>
+            <head>
+                <script>
+                    function fun6(e) {
+                       var c=(e.key) ;
+                        if (c=="a" || c=="e" || c=="i" || c=="o" || c=="u" || c=="A" || c=="E" || c=="I" || c=="O" || c=="U") 
+                        {
+                            document.write("vowel is pressed " + e.keyCode + " " + e.key);
+                        }
+                        else {
+                            document.write(e.keyCode + " " + e.key);
+                        }
+                    }
+                    function fun7(id) {
+                        id.bgColor="green";
+                    }
+                </script>
+            </head>
+            <body onkeypress="fun6(event)"
+            
+            onkeyup="fun7(this)"></body>
+        </html>   
