@@ -1,0 +1,16 @@
+<!-- 1) - onchange,onfocus -->
+
+<html>
+    <body>
+        <script>
+            function upper(id) {
+                id.value = id.value.toUpperCase();
+            }
+        </script>
+        <input type="text" value="Hello" onchange="upper(this)">
+        <input type="text" value="Hello" onfocus="this.style.backgroundColor='yellow' ">
+    </body>
+</html>
+
+
+
