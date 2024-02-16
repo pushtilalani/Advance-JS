@@ -1,0 +1,168 @@
+<!--1) -  Write a JS Code to check which mouse button is click either right,left or middle. -->
+
+<html>
+    <head>
+        <script>
+            function fun(e) {
+                val = e.button;
+                switch(val) {
+                    case 0 : alert("left click");
+                    break;
+                    case 1 : alert("middle click");
+                    break;
+                    case 2 : alert("right click");
+                    break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div style="width:50%;height:50%;border : 1px solid black;"onmousedown="fun(event)">click on mouse
+             left,right or middle</div>
+    </body>
+</html>
+
+<hr>
+
+<!-- 2) - Write a JS Code to handle following mouse events. If one mouse is over heading,it should turn yellow,
+     if mouse goes out then it should turn black. If find time button is click,then show date and time 
+     information. If button named red is click then background color should turn red and button named green 
+     is click then background color should turn green. -->
+
+
+
+<html>
+    <head>
+        <script>
+            function fun1(id) {
+                id.style.color="yellow";
+            }
+            function fun2(id) {
+                id.style.color="black" ;
+            }
+            function fun3(id) {
+                d=new Date() ;
+                document.getElementById("demo").innerHTML=d;
+            }
+            function fun4() {
+                id=document.getElementById("bd");
+                id.bgColor="red";
+            }
+            function fun5() {
+                id=document.getElementById("bd");
+                id.bgColor="green";
+            }
+        </script>
+    </head>
+    <body id="bd">
+        <h1 onmouseover="fun1(this)" onmouseout="fun2(this)">Hello</h1>
+        <input type="submit" value="find Time" onclick="fun3(this)">
+        <p id="demo"></p>
+        <input type="submit" value="red" onclick="fun4()">
+        <input type="submit" value="green" onclick="fun5()">
+    </body>
+</html>
+
+
+<hr>
+
+
+<!-- 3) - Write down a javascript code whether a username in a form is blank or not.If it is blank then there 
+          should be alert with message enter something. -->
+
+
+
+ <html>
+    <head>
+        <script>
+            function f() {
+                obj = document.f2.n2.value;
+                if(obj=="") {
+                    alert("Enter Something")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f2" onsubmit="f()">
+            <input type="text" name="n2">
+            <input type="submit">
+        </form>
+    </body>
+ </html>         
+
+ <hr>
+
+ 
+
+ <!-- 4) - Design a login form using JS folowing validation in password field,minimum length of password must
+      be 8 letters and it must have some special characters. -->
+
+
+
+<html>
+    <head>
+        <script>
+            function validate_password() {
+                pat = /\W/i ;
+                p = document.getElementById("f3").value ;
+                if(pat.test(p)) {
+                    alert("PERFECT");
+                }
+                else {
+                    alert("not PERFECT");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="password" id="f3" minlength="8">
+        <input type="submit" onclick="validate_password()">
+    </body>
+</html>      
+
+<hr>
+
+
+
+<!-- 5) - Write a JS Code to Validate user_name and password . Password length must be between 6 to 12 characters.
+     user_name should not start with _,@ or any number/digit. Both the fields must not be blank. -->
+
+
+ 
+<html>
+    <head>
+        <script>
+            function validate_field() {
+                pat1 = /^_|^@|^\d/
+                s=document.getElementById("p1").value;
+                q=document.getElementById("p2").value;
+                if(s.length==0||q.length==0) {
+                    alert("Username and passward must not be blank");
+                }
+                else if(q.length<6||q.length>12) {
+                    alert("Pass must be between 6 to 12 characters");
+                }
+                else {
+                    alert("Password is strong");
+                    if(pat1.test(s)) {
+                        alert("Enter valid username");
+                    }
+                    else {
+                        alert("Username is Perfect")
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="p1">
+        <input type="password" id="p2">
+        <input type="submit" onclick="validate_field()">
+    </body>
+</html>     
+
+<hr>
+
+
+
