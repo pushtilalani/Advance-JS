@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function change(id) {
+                id.innerHTML="Done";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 onclick="change(this)">Click on me</h1>
+    </body>
+</html>
+
+
+
+<html>
+    <body>
+        <script>
+            function fun(id) {
+                id.innerHTML = "mouse moved over" ; 
+            }
+            function fun1(id) {
+                id.innerHTML = "mouse moved out" ; 
+            }
+        </script>
+        <div onmouseover="fun(this)" onmouseout="fun1(this)" style="width:50%;height:40%;
+        background-color:cyan;border : 2px solid blue;"></div>
+    </body>
+</html>
